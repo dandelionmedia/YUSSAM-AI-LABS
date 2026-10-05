@@ -55,6 +55,41 @@ h1{margin:0;color:var(--navy);font-size:clamp(2.75rem,4vw,4rem);line-height:1.18
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 @media(forced-colors:active){.lab-card,.toc-panel,.toc-summary,.toc-nav,.premium-top{border:1px solid CanvasText}.number,.open-label,.toc-nav a,.premium-top{background:Canvas;color:CanvasText;border:1px solid CanvasText}.thumbnail-shade{display:none}.category::before{background:CanvasText}}
 
+/* ===== 모바일 플로팅 버튼 최종 조정 ===== */
+@media(max-width:719px){
+  .toc-rail{
+    left:max(12px,env(safe-area-inset-left));
+    top:calc(76px + env(safe-area-inset-top));
+    bottom:auto;
+  }
+  .toc-summary{
+    min-height:42px;
+    padding:8px 12px;
+    gap:8px;
+    border-radius:12px;
+    font-size:.9rem;
+  }
+  .toc-toggle{width:15px;height:15px}
+  .toc-nav{
+    top:calc(100% + 8px);
+    bottom:auto;
+    width:min(290px,calc(100vw - 28px));
+    max-height:min(520px,calc(100dvh - 140px));
+  }
+  .premium-top{
+    right:max(12px,env(safe-area-inset-right));
+    bottom:calc(14px + env(safe-area-inset-bottom));
+    min-width:50px;
+    min-height:50px;
+    width:50px;
+    height:50px;
+    padding:6px;
+    border-radius:14px;
+  }
+  .premium-top strong{font-size:.9rem;letter-spacing:.04em}
+  .premium-top span{display:none}
+}
+
 </style></head><body id="page-top"><a class="skip" href="#labs">교육·실습 자료 바로가기</a>
 <header class="topbar"><div class="topbar-inner"><div class="brand"><span class="brand-mark" aria-hidden="true">Y.</span><span>YUSSAM AI LABS</span></div><span class="topbar-note">AI콘텐츠마케팅연구소 유쌤클래스</span></div></header>
 <div class="workspace"><aside class="toc-rail" aria-label="자료 목차"><details class="toc-panel" id="labs-toc" open><summary class="toc-summary"><span><span class="toc-caption">간단 목차</span><span class="toc-caption-small">목차</span> <small>11개 자료</small></span><svg class="toc-toggle" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></summary><nav class="toc-nav" aria-label="교육·실습 자료 바로가기"><ol><li><a href="#lab-01"><span class="toc-index">01</span><span>AI 도구 모음</span></a></li><li><a href="#lab-02"><span class="toc-index">02</span><span>유튜브 실습</span></a></li><li><a href="#lab-03"><span class="toc-index">03</span><span>유치원 교사 AI</span></a></li><li><a href="#lab-04"><span class="toc-index">04</span><span>보건교육 AI</span></a></li><li><a href="#lab-05"><span class="toc-index">05</span><span>청소년 AI 창작</span></a></li><li><a href="#lab-06"><span class="toc-index">06</span><span>생성형 AI 실무</span></a></li><li><a href="#lab-07"><span class="toc-index">07</span><span>김유성 강사 소개</span></a></li><li><a href="#lab-08"><span class="toc-index">08</span><span>AI 문제 해결</span></a></li><li><a href="#lab-09"><span class="toc-index">09</span><span>AI 업무 지시서</span></a></li><li><a href="#lab-10"><span class="toc-index">10</span><span>AI리터러시 실습</span></a></li><li><a href="#lab-11"><span class="toc-index">11</span><span>AI콘텐츠크리에이터</span></a></li></ol></nav></details></aside><main class="wrap"><section class="intro" aria-labelledby="page-title"><div><p class="eyebrow">유쌤클래스 · AI 교육과 실습</p><h1 id="page-title">YUSSAM <span>AI LABS</span></h1><p class="intro-description">필요한 배움을 선택하고, 지금 바로 실행하세요.</p></div><p class="intro-note"><strong>교육·실습 자료 11개</strong>원하는 자료를 선택해 새 창에서 열어보세요.</p></section><section class="grid" id="labs" aria-label="AI 교육 및 실습 페이지 11개">
