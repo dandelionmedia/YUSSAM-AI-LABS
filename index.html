@@ -127,4 +127,35 @@ h1{margin:0;color:var(--navy);font-size:clamp(2.75rem,4vw,4rem);line-height:1.18
     }
   });
 })();
-</script><script type="module">import { mountSiteWidget } from "/_sites/dispatch-assets/sites-widget.js";mountSiteWidget({"kind":"editor-composer","mobileEnabled":false,"environment":"production","chatgptOrigin":"https://chatgpt.com","locale":"ko-KR","accountId":"personal","projectId":"appgprj_6ac25560fc008191aabfcba3cbb774b4","projectTitle":"YUSSAM AI LABS"});</script></body></html>
+</script><script type="module">import { mountSiteWidget } from "/_sites/dispatch-assets/sites-widget.js";mountSiteWidget({"kind":"editor-composer","mobileEnabled":false,"environment":"production","chatgptOrigin":"https://chatgpt.com","locale":"ko-KR","accountId":"personal","projectId":"appgprj_6ac25560fc008191aabfcba3cbb774b4","projectTitle":"YUSSAM AI LABS"});</script>
+<script>
+/* 일반 사용자의 우클릭/소스보기/개발자도구 접근 경로를 억제합니다.
+   주의: 브라우저로 전송된 HTML/CSS/JS는 기술적으로 완전히 숨길 수 없습니다. */
+(function () {
+  'use strict';
+
+  // 마우스 오른쪽 버튼 메뉴 차단
+  document.addEventListener('contextmenu', function (event) {
+    event.preventDefault();
+  }, { capture: true });
+
+  // 대표적인 소스보기 / 개발자도구 단축키 차단
+  document.addEventListener('keydown', function (event) {
+    const key = (event.key || '').toLowerCase();
+    const ctrlOrMeta = event.ctrlKey || event.metaKey;
+
+    const blocked =
+      event.key === 'F12' ||
+      (ctrlOrMeta && key === 'u') ||
+      (ctrlOrMeta && event.shiftKey && ['i', 'j', 'c'].includes(key));
+
+    if (blocked) {
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+      return false;
+    }
+  }, { capture: true });
+})();
+</script>
+</body></html>
